@@ -44,7 +44,7 @@ int main ( int argc , char * argv []) {
 		if( pid > 0){
 			// Returned to parent or caller. The value contains process ID of newly created child process.
 			printf ("PID %d Process Dad\n" , getpid () ) ;
-		} else {
+		} else if(pid == 0){
 			// Returned to the newly created child process
 			printf ("PID %d\tProcess Son\n" , getpid () );
 		}
